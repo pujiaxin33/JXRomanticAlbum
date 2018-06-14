@@ -54,6 +54,9 @@
 		196EB01D20D259290058E926 /* JXRomanticAlbum */ = {
 			isa = PBXGroup;
 			children = (
+				196EB03220D25AB70058E926 /* Models */,
+				196EB03120D25AB10058E926 /* Views */,
+				196EB03020D25AA30058E926 /* Controllers */,
 				196EB01E20D259290058E926 /* AppDelegate.swift */,
 				196EB02020D259290058E926 /* ViewController.swift */,
 				196EB02220D259290058E926 /* Main.storyboard */,
@@ -62,6 +65,27 @@
 				196EB02A20D2592C0058E926 /* Info.plist */,
 			);
 			path = JXRomanticAlbum;
+			sourceTree = "<group>";
+		};
+		196EB03020D25AA30058E926 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		196EB03120D25AB10058E926 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		196EB03220D25AB70058E926 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -90,6 +114,7 @@
 		196EB01320D259290058E926 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = JX;
 				LastSwiftUpdateCheck = 0940;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = jiaxin;
