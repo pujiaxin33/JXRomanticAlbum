@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Lottie
 
 class RAPlayZoomPuzzleViewController: UIViewController {
     var image: UIImage?
@@ -37,6 +38,13 @@ class RAPlayZoomPuzzleViewController: UIViewController {
         self.view.addSubview(collectionView)
 
         self.reloadData()
+    }
+
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let animationView = LOTAnimationView(name: "success")
+        animationView.frame = CGRect(x: 100, y: 100, width: 100, height: 100)
+        self.view.addSubview(animationView)
+        animationView.play()
     }
 
     func reloadData() {

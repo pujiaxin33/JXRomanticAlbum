@@ -19,6 +19,10 @@
 		196EB04120D2779C0058E926 /* RAPlayZoomPuzzleCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196EB04020D2779C0058E926 /* RAPlayZoomPuzzleCellModel.swift */; };
 		196EB04320D383320058E926 /* RARandomFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196EB04220D383320058E926 /* RARandomFactory.swift */; };
 		196EB04520D3916B0058E926 /* RARuleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196EB04420D3916B0058E926 /* RARuleManager.swift */; };
+		196EB05020D3B93C0058E926 /* love_explosion.json in Resources */ = {isa = PBXBuildFile; fileRef = 196EB04D20D3B93B0058E926 /* love_explosion.json */; };
+		196EB05220D3B93C0058E926 /* heart_box.json in Resources */ = {isa = PBXBuildFile; fileRef = 196EB04F20D3B93B0058E926 /* heart_box.json */; };
+		196EB05420D3B9450058E926 /* newAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = 196EB05320D3B9450058E926 /* newAnimation.json */; };
+		196EB05620D3BAA10058E926 /* completed.json in Resources */ = {isa = PBXBuildFile; fileRef = 196EB05520D3BAA10058E926 /* completed.json */; };
 		7370039E63808BEAAFADFAF0 /* Pods_JXRomanticAlbum.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3C12A29A08E6A3268E6099A /* Pods_JXRomanticAlbum.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +41,10 @@
 		196EB04020D2779C0058E926 /* RAPlayZoomPuzzleCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RAPlayZoomPuzzleCellModel.swift; sourceTree = "<group>"; };
 		196EB04220D383320058E926 /* RARandomFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RARandomFactory.swift; sourceTree = "<group>"; };
 		196EB04420D3916B0058E926 /* RARuleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RARuleManager.swift; sourceTree = "<group>"; };
+		196EB04D20D3B93B0058E926 /* love_explosion.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = love_explosion.json; sourceTree = "<group>"; };
+		196EB04F20D3B93B0058E926 /* heart_box.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = heart_box.json; sourceTree = "<group>"; };
+		196EB05320D3B9450058E926 /* newAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = newAnimation.json; sourceTree = "<group>"; };
+		196EB05520D3BAA10058E926 /* completed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = completed.json; sourceTree = "<group>"; };
 		46A97EB8C8CD66D8F4FD1700 /* Pods-JXRomanticAlbum.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JXRomanticAlbum.release.xcconfig"; path = "Pods/Target Support Files/Pods-JXRomanticAlbum/Pods-JXRomanticAlbum.release.xcconfig"; sourceTree = "<group>"; };
 		B3C12A29A08E6A3268E6099A /* Pods_JXRomanticAlbum.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JXRomanticAlbum.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA9BD226039D34CA824AAEBE /* Pods-JXRomanticAlbum.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JXRomanticAlbum.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JXRomanticAlbum/Pods-JXRomanticAlbum.debug.xcconfig"; sourceTree = "<group>"; };
@@ -135,6 +143,7 @@
 		196EB04820D3B77E0058E926 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				196EB04A20D3B87C0058E926 /* Lottie */,
 				196EB02520D2592C0058E926 /* Assets.xcassets */,
 			);
 			path = Assets;
@@ -146,6 +155,17 @@
 				196EB02A20D2592C0058E926 /* Info.plist */,
 			);
 			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		196EB04A20D3B87C0058E926 /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				196EB05520D3BAA10058E926 /* completed.json */,
+				196EB05320D3B9450058E926 /* newAnimation.json */,
+				196EB04F20D3B93B0058E926 /* heart_box.json */,
+				196EB04D20D3B93B0058E926 /* love_explosion.json */,
+			);
+			path = Lottie;
 			sourceTree = "<group>";
 		};
 		A9F3A79212FCD0B01BCBB520 /* Pods */ = {
@@ -227,9 +247,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				196EB05220D3B93C0058E926 /* heart_box.json in Resources */,
 				196EB02920D2592C0058E926 /* LaunchScreen.storyboard in Resources */,
+				196EB05420D3B9450058E926 /* newAnimation.json in Resources */,
 				196EB02620D2592C0058E926 /* Assets.xcassets in Resources */,
+				196EB05620D3BAA10058E926 /* completed.json in Resources */,
 				196EB02420D259290058E926 /* Main.storyboard in Resources */,
+				196EB05020D3B93C0058E926 /* love_explosion.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
