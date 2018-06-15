@@ -75,15 +75,13 @@
 		196EB01D20D259290058E926 /* JXRomanticAlbum */ = {
 			isa = PBXGroup;
 			children = (
+				196EB04620D3B7680058E926 /* Main */,
 				196EB03B20D273520058E926 /* Common */,
 				196EB03220D25AB70058E926 /* Models */,
 				196EB03120D25AB10058E926 /* Views */,
 				196EB03020D25AA30058E926 /* Controllers */,
-				196EB01E20D259290058E926 /* AppDelegate.swift */,
-				196EB02220D259290058E926 /* Main.storyboard */,
-				196EB02520D2592C0058E926 /* Assets.xcassets */,
-				196EB02720D2592C0058E926 /* LaunchScreen.storyboard */,
-				196EB02A20D2592C0058E926 /* Info.plist */,
+				196EB04820D3B77E0058E926 /* Assets */,
+				196EB04920D3B7AC0058E926 /* SupportFiles */,
 			);
 			path = JXRomanticAlbum;
 			sourceTree = "<group>";
@@ -122,6 +120,32 @@
 				196EB04420D3916B0058E926 /* RARuleManager.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		196EB04620D3B7680058E926 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				196EB01E20D259290058E926 /* AppDelegate.swift */,
+				196EB02220D259290058E926 /* Main.storyboard */,
+				196EB02720D2592C0058E926 /* LaunchScreen.storyboard */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		196EB04820D3B77E0058E926 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				196EB02520D2592C0058E926 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		196EB04920D3B7AC0058E926 /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				196EB02A20D2592C0058E926 /* Info.plist */,
+			);
+			path = SupportFiles;
 			sourceTree = "<group>";
 		};
 		A9F3A79212FCD0B01BCBB520 /* Pods */ = {
@@ -425,9 +449,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CUHY5967Q2;
-				INFOPLIST_FILE = JXRomanticAlbum/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/JXRomanticAlbum/SupportFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = jiaxin.JXRomanticAlbum;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -442,9 +469,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CUHY5967Q2;
-				INFOPLIST_FILE = JXRomanticAlbum/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/JXRomanticAlbum/SupportFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = jiaxin.JXRomanticAlbum;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
