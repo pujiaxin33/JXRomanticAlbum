@@ -34,6 +34,10 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>请允许拍照以便提供拼图游戏素材</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>请允许访问相册以便提供拼图游戏素材</string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
