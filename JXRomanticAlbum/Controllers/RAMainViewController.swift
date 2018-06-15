@@ -10,12 +10,22 @@ import UIKit
 import AVFoundation
 import Photos
 import Lottie
+import SnapKit
 
 class RAMainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let animationView = LOTAnimationView(name: "newAnimation")
+        animationView.loopAnimation = true
+        self.view.addSubview(animationView)
+        animationView.snp.makeConstraints { (make) in
+            make.width.height.equalTo(200)
+            make.bottom.equalToSuperview().offset(-50)
+            make.centerX.equalToSuperview()
+        }
+        animationView.play()
     }
 
     @IBAction func cameraButtonClicked(_ sender: UIButton) {
@@ -26,12 +36,12 @@ class RAMainViewController: UIViewController {
         infoImage()
     }
 
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        let animationView = LOTAnimationView(name: "newAnimation")
-        animationView.frame = CGRect(x: 100, y: 100, width: 100, height: 100)
-        self.view.addSubview(animationView)
-        animationView.play()
-    }
+//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        let animationView = LOTAnimationView(name: "completed")
+//        animationView.frame = CGRect(x: 100, y: 100, width: 250, height: 150)
+//        self.view.addSubview(animationView)
+//        animationView.play()
+//    }
 
     //判断相机访问权限
     func cameraPermissions() -> Bool{
