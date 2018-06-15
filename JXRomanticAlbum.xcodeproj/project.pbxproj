@@ -19,6 +19,7 @@
 		196EB04120D2779C0058E926 /* RAPlayZoomPuzzleCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196EB04020D2779C0058E926 /* RAPlayZoomPuzzleCellModel.swift */; };
 		196EB04320D383320058E926 /* RARandomFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196EB04220D383320058E926 /* RARandomFactory.swift */; };
 		196EB04520D3916B0058E926 /* RARuleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196EB04420D3916B0058E926 /* RARuleManager.swift */; };
+		7370039E63808BEAAFADFAF0 /* Pods_JXRomanticAlbum.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3C12A29A08E6A3268E6099A /* Pods_JXRomanticAlbum.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,9 @@
 		196EB04020D2779C0058E926 /* RAPlayZoomPuzzleCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RAPlayZoomPuzzleCellModel.swift; sourceTree = "<group>"; };
 		196EB04220D383320058E926 /* RARandomFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RARandomFactory.swift; sourceTree = "<group>"; };
 		196EB04420D3916B0058E926 /* RARuleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RARuleManager.swift; sourceTree = "<group>"; };
+		46A97EB8C8CD66D8F4FD1700 /* Pods-JXRomanticAlbum.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JXRomanticAlbum.release.xcconfig"; path = "Pods/Target Support Files/Pods-JXRomanticAlbum/Pods-JXRomanticAlbum.release.xcconfig"; sourceTree = "<group>"; };
+		B3C12A29A08E6A3268E6099A /* Pods_JXRomanticAlbum.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JXRomanticAlbum.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA9BD226039D34CA824AAEBE /* Pods-JXRomanticAlbum.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JXRomanticAlbum.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JXRomanticAlbum/Pods-JXRomanticAlbum.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7370039E63808BEAAFADFAF0 /* Pods_JXRomanticAlbum.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +59,8 @@
 			children = (
 				196EB01D20D259290058E926 /* JXRomanticAlbum */,
 				196EB01C20D259290058E926 /* Products */,
+				A9F3A79212FCD0B01BCBB520 /* Pods */,
+				F898DB7D56483BB9A63DB9F1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -117,6 +124,23 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		A9F3A79212FCD0B01BCBB520 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FA9BD226039D34CA824AAEBE /* Pods-JXRomanticAlbum.debug.xcconfig */,
+				46A97EB8C8CD66D8F4FD1700 /* Pods-JXRomanticAlbum.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F898DB7D56483BB9A63DB9F1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B3C12A29A08E6A3268E6099A /* Pods_JXRomanticAlbum.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -124,9 +148,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 196EB02D20D2592C0058E926 /* Build configuration list for PBXNativeTarget "JXRomanticAlbum" */;
 			buildPhases = (
+				715949172EEA6D399E56E376 /* [CP] Check Pods Manifest.lock */,
 				196EB01720D259290058E926 /* Sources */,
 				196EB01820D259290058E926 /* Frameworks */,
 				196EB01920D259290058E926 /* Resources */,
+				232A3A564C3A509E054C6401 /* [CP] Embed Pods Frameworks */,
+				79EFBF9071A7A40F12C7419E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -183,6 +210,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		232A3A564C3A509E054C6401 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-JXRomanticAlbum/Pods-JXRomanticAlbum-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JXRomanticAlbum/Pods-JXRomanticAlbum-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		715949172EEA6D399E56E376 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JXRomanticAlbum-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		79EFBF9071A7A40F12C7419E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JXRomanticAlbum/Pods-JXRomanticAlbum-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		196EB01720D259290058E926 /* Sources */ = {
@@ -339,16 +420,14 @@
 		};
 		196EB02E20D2592C0058E926 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA9BD226039D34CA824AAEBE /* Pods-JXRomanticAlbum.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CUHY5967Q2;
 				INFOPLIST_FILE = JXRomanticAlbum/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jiaxin.JXRomanticAlbum;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -358,16 +437,14 @@
 		};
 		196EB02F20D2592C0058E926 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46A97EB8C8CD66D8F4FD1700 /* Pods-JXRomanticAlbum.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CUHY5967Q2;
 				INFOPLIST_FILE = JXRomanticAlbum/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jiaxin.JXRomanticAlbum;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
