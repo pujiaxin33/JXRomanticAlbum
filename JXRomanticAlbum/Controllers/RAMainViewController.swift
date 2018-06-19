@@ -13,11 +13,12 @@ import Lottie
 import SnapKit
 
 class RAMainViewController: UIViewController {
+    var animationView: LOTAnimationView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let animationView = LOTAnimationView(name: "newAnimation")
+        animationView = LOTAnimationView(name: "newAnimation")
         animationView.loopAnimation = true
         self.view.addSubview(animationView)
         animationView.snp.makeConstraints { (make) in
@@ -25,6 +26,12 @@ class RAMainViewController: UIViewController {
             make.bottom.equalToSuperview().offset(-50)
             make.centerX.equalToSuperview()
         }
+        animationView.play()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
         animationView.play()
     }
 
@@ -127,10 +134,14 @@ extension RAMainViewController: UIImagePickerControllerDelegate & UINavigationCo
 //        }
 
         //这就是你要的图片
-        print(image)
-        let puzzleVC = RAPlayZoomPuzzleViewController()
-        puzzleVC.image = image
-        self.navigationController?.pushViewController(puzzleVC, animated: false)
+        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+        let modeVC = storyboard.instantiateViewController(withIdentifier: "RAPlayModeSelectViewController") as! RAPlayModeSelectViewController
+        modeVC.image = image
+        self.navigationController?.pushViewController(modeVC, animated: false)
+
+//        let puzzleVC = RAPlayZoomPuzzleViewController()
+//        puzzleVC.image = image
+//        self.navigationController?.pushViewController(puzzleVC, animated: false)
 
         self.dismiss(animated: true, completion: nil)
     }

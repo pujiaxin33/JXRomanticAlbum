@@ -51,6 +51,144 @@
             </objects>
             <point key="canvasLocation" x="972" y="33.733133433283363"/>
         </scene>
+        <!--Play Mode Select View Controller-->
+        <scene sceneID="VSV-cK-Dx2">
+            <objects>
+                <viewController storyboardIdentifier="RAPlayModeSelectViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xaV-iS-N9L" customClass="RAPlayModeSelectViewController" customModule="JXRomanticAlbum" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dUa-Fu-7XL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oAB-2m-hvn">
+                                <rect key="frame" x="44" y="220" width="287" height="50"/>
+                                <color key="backgroundColor" red="0.255" green="0.80100000000000005" blue="0.27000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="UYO-QC-QFS"/>
+                                </constraints>
+                                <state key="normal" title="拼图"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="puzzleButtonClicked:" destination="xaV-iS-N9L" eventType="touchUpInside" id="xrM-Uq-5jj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sys-FF-2yF">
+                                <rect key="frame" x="44" y="350" width="287" height="50"/>
+                                <color key="backgroundColor" red="0.255" green="0.80100000000000005" blue="0.27000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ORf-0Z-suV"/>
+                                </constraints>
+                                <state key="normal" title="反转"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="reverseButtonClicked:" destination="xaV-iS-N9L" eventType="touchUpInside" id="OkF-ZL-aMZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="oAB-2m-hvn" firstAttribute="top" secondItem="zSt-dm-7Lm" secondAttribute="top" constant="200" id="EP9-pr-lZL"/>
+                            <constraint firstItem="zSt-dm-7Lm" firstAttribute="trailing" secondItem="oAB-2m-hvn" secondAttribute="trailing" constant="44" id="EUS-nj-v16"/>
+                            <constraint firstItem="sys-FF-2yF" firstAttribute="top" secondItem="oAB-2m-hvn" secondAttribute="bottom" constant="80" id="L0x-C1-xhz"/>
+                            <constraint firstItem="sys-FF-2yF" firstAttribute="leading" secondItem="zSt-dm-7Lm" secondAttribute="leading" constant="44" id="U3X-AZ-tFQ"/>
+                            <constraint firstItem="zSt-dm-7Lm" firstAttribute="trailing" secondItem="sys-FF-2yF" secondAttribute="trailing" constant="44" id="keh-vE-tgU"/>
+                            <constraint firstItem="oAB-2m-hvn" firstAttribute="leading" secondItem="zSt-dm-7Lm" secondAttribute="leading" constant="44" id="qSP-x1-EQd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="zSt-dm-7Lm"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LNo-Ml-chq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2006" y="34"/>
+        </scene>
+        <!--Play Size Select View Controller-->
+        <scene sceneID="Iga-YP-VNz">
+            <objects>
+                <viewController storyboardIdentifier="RAPlaySizeSelectViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="yfU-xB-NP8" customClass="RAPlaySizeSelectViewController" customModule="JXRomanticAlbum" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="y28-41-qwH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ljn-Zm-dXm">
+                                <rect key="frame" x="44" y="120" width="287" height="50"/>
+                                <color key="backgroundColor" red="0.255" green="0.80100000000000005" blue="0.27000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Knr-Zk-1yF"/>
+                                </constraints>
+                                <state key="normal" title="3X3"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="threeButtonClicked:" destination="yfU-xB-NP8" eventType="touchUpInside" id="VfM-nR-skW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AuE-wx-dno">
+                                <rect key="frame" x="44" y="250" width="287" height="50"/>
+                                <color key="backgroundColor" red="0.255" green="0.80100000000000005" blue="0.27000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="RMs-KY-qbX"/>
+                                </constraints>
+                                <state key="normal" title="6X6"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="sixButtonClicked:" destination="yfU-xB-NP8" eventType="touchUpInside" id="5Nq-4z-qhI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qtu-W5-2Y4">
+                                <rect key="frame" x="44" y="380" width="287" height="50"/>
+                                <color key="backgroundColor" red="0.255" green="0.80100000000000005" blue="0.27000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="NQE-Ha-ooz"/>
+                                </constraints>
+                                <state key="normal" title="9X9"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="nineButtonClicked:" destination="yfU-xB-NP8" eventType="touchUpInside" id="3xt-37-hss"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="AuE-wx-dno" firstAttribute="top" secondItem="Ljn-Zm-dXm" secondAttribute="bottom" constant="80" id="9iQ-xH-ufX"/>
+                            <constraint firstItem="qtu-W5-2Y4" firstAttribute="leading" secondItem="Uii-OK-GBD" secondAttribute="leading" constant="44" id="Afh-zZ-d3A"/>
+                            <constraint firstItem="qtu-W5-2Y4" firstAttribute="top" secondItem="AuE-wx-dno" secondAttribute="bottom" constant="80" id="BnQ-m2-zh9"/>
+                            <constraint firstItem="Ljn-Zm-dXm" firstAttribute="top" secondItem="Uii-OK-GBD" secondAttribute="top" constant="100" id="T3u-D0-wZC"/>
+                            <constraint firstItem="Uii-OK-GBD" firstAttribute="trailing" secondItem="AuE-wx-dno" secondAttribute="trailing" constant="44" id="gpN-Ln-KWO"/>
+                            <constraint firstItem="Uii-OK-GBD" firstAttribute="trailing" secondItem="Ljn-Zm-dXm" secondAttribute="trailing" constant="44" id="h4V-8B-Cxf"/>
+                            <constraint firstItem="Ljn-Zm-dXm" firstAttribute="leading" secondItem="Uii-OK-GBD" secondAttribute="leading" constant="44" id="hVI-V3-jSm"/>
+                            <constraint firstItem="AuE-wx-dno" firstAttribute="leading" secondItem="Uii-OK-GBD" secondAttribute="leading" constant="44" id="pdn-I3-55r"/>
+                            <constraint firstItem="Uii-OK-GBD" firstAttribute="trailing" secondItem="qtu-W5-2Y4" secondAttribute="trailing" constant="44" id="tmg-ms-zF3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Uii-OK-GBD"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SfD-Ul-p71" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2833" y="34"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Pdb-LV-YN4">
             <objects>

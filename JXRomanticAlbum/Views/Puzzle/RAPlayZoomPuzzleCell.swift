@@ -27,6 +27,14 @@ class RAPlayZoomPuzzleCell: UICollectionViewCell {
         imageView.image = cellModel.image
         imageView.layer.contentsRect = cellModel.contentsRect!
         imageView.isHidden = cellModel.isEmpty
+
+        if cellModel.isEmpty {
+            self.layer.borderColor = UIColor.clear.cgColor
+            self.layer.borderWidth = 1/UIScreen.main.scale
+        }else {
+            self.layer.borderColor = UIColor.gray.cgColor
+            self.layer.borderWidth = 1/UIScreen.main.scale
+        }
     }
 
 

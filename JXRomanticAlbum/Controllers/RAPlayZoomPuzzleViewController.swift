@@ -8,14 +8,15 @@
 
 import UIKit
 import Lottie
+import SwiftEntryKit
 
-class RAPlayZoomPuzzleViewController: UIViewController {
-    var image: UIImage?
+class RAPlayZoomPuzzleViewController: RABaseViewController {
+    var playSize = RAPlaySize.init(row: 3, column: 3)
+
     var dataSource = [[RAPlayZoomPuzzleCellModel]]()
     var collectionView: UICollectionView!
     var flowLayout: UICollectionViewFlowLayout!
     var puzzleMode = RAPlayPuzzleMode.move
-    var playSize = RAPlaySize.init(row: 3, column: 3)
     var currentEmptyCoordiate = RAItemCoordinate.init(x: 0, y: 0)
     var isMoving = false
 
@@ -25,11 +26,18 @@ class RAPlayZoomPuzzleViewController: UIViewController {
         self.view.backgroundColor = UIColor.white
         self.automaticallyAdjustsScrollViewInsets = false
 
+        let right = UINavigationItem(title: "查看原图")
+//        self.navigationItem.rightBarButtonItem =
+
+//        let originalImageView = UIImageView(image: image)
+//        originalImageView.frame = CGRect(x: 100, y: 0, width: 80, height: 80)
+//        view.addSubview(originalImageView)
+
         flowLayout = UICollectionViewFlowLayout()
         flowLayout.minimumLineSpacing = 0
         flowLayout.minimumInteritemSpacing = 0
 
-        collectionView = UICollectionView(frame: CGRect(x: 0, y: 200, width: SCREEN_WIDTH, height: SCREEN_WIDTH), collectionViewLayout: flowLayout)
+        collectionView = UICollectionView(frame: CGRect(x: 0, y: 150, width: SCREEN_WIDTH, height: SCREEN_WIDTH), collectionViewLayout: flowLayout)
         collectionView.backgroundColor = UIColor.white
         collectionView.isScrollEnabled = false
         collectionView.dataSource = self
@@ -40,14 +48,28 @@ class RAPlayZoomPuzzleViewController: UIViewController {
         self.reloadData()
     }
 
-    
-
     func reloadData() {
         dataSource = RARandomFactory.getRandomPuzzleArray(playSize: playSize, image: image!)
         //默认空白图在右下角
         currentEmptyCoordiate = RAItemCoordinate.init(x: playSize.column - 1, y: playSize.row - 1)
 
         self.collectionView.reloadData()
+    }
+
+    func showCompleted() {
+        let view = RACompletedView()
+        view.againCallback = {[weak self] in
+            self?.navigationController?.popToRootViewController(animated: true)
+            SwiftEntryKit.dismiss()
+        }
+        var attri = EKAttributes.init()
+        attri.displayDuration = .infinity
+        attri.position = .center
+        attri.positionConstraints.size = .init(width: .constant(value: 250), height: .constant(value: 200))
+        attri.entryInteraction = .absorbTouches
+        attri.screenBackground = .visualEffect(style: .dark)
+        attri.entranceAnimation = .init(translate: EKAttributes.Animation.Translate(duration: 0), scale: EKAttributes.Animation.RangeAnimation(from: 0.1, to: 1, duration: 0.25), fade: EKAttributes.Animation.RangeAnimation(from: 0.5, to: 1, duration: 0.25))
+        SwiftEntryKit.display(entry: view, using: attri)
     }
 }
 
@@ -107,7 +129,7 @@ extension RAPlayZoomPuzzleViewController: UICollectionViewDelegate, UICollection
                 self.currentEmptyCoordiate = RAItemCoordinate.init(x: indexPath.item, y: indexPath.section)
                 self.isMoving = false
                 if RARuleManager.checkPuzzleCompleted(dataSource: self.dataSource) {
-                    print("完整的")
+                    self.showCompleted()
                 }else {
 
                 }
