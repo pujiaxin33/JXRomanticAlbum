@@ -39,7 +39,12 @@ class RAPlayModeSelectViewController: RABaseViewController {
     @IBAction func photoWallButtonClicked(_ sender: UIButton) {
         self.clickedPlayMode = .photoWall
     }
-
+    
+    @IBAction func stickerButtonClicked(_ sender: UIButton) {
+        let vc = RAPlayRoomVideoStickerViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
 
 }
 
