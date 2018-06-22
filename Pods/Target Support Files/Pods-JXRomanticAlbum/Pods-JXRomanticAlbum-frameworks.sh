@@ -102,12 +102,14 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/GPUImage/GPUImage.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/QuickLayout/QuickLayout.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftEntryKit/SwiftEntryKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/GPUImage/GPUImage.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/QuickLayout/QuickLayout.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftEntryKit/SwiftEntryKit.framework"

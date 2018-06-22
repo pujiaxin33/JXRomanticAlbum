@@ -9,5 +9,6 @@ target ‘JXRomanticAlbum’ do
 pod 'lottie-ios', '2.1.5'
 pod 'SnapKit', '4.0.0'
 pod 'SwiftEntryKit', '0.4.1'
+pod 'GPUImage'
 
 end
