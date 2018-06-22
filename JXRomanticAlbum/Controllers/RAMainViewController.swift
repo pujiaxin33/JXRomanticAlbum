@@ -104,13 +104,11 @@ class RAMainViewController: UIViewController {
         if self.cameraPermissions() {
 
             let imagePicker = UIImagePickerController.init()
-
             imagePicker.delegate = self
             imagePicker.sourceType = UIImagePickerControllerSourceType.camera
             imagePicker.modalTransitionStyle = UIModalTransitionStyle.coverVertical
             imagePicker.allowsEditing = true
 
-            //打开照相机
             self.navigationController?.present(imagePicker, animated: true, completion: nil)
         } else {
             UIAlertView.init(title: "提示", message: "请在设置中打开摄像头权限", delegate: nil, cancelButtonTitle: "确定").show()

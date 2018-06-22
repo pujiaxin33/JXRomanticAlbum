@@ -14,7 +14,7 @@ class RABaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.edgesForExtendedLayout = .init(rawValue: 0)
     }
 
     override func didReceiveMemoryWarning() {

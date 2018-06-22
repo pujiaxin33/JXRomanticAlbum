@@ -10,10 +10,10 @@ import UIKit
 import Lottie
 import SwiftEntryKit
 
-class RAPlayZoomPuzzleViewController: RABaseViewController {
+class RAPlayRoomPuzzleViewController: RABaseViewController {
     var playSize = RAPlaySize.init(row: 3, column: 3)
 
-    var dataSource = [[RAPlayZoomPuzzleCellModel]]()
+    var dataSource = [[RAPlayRoomPuzzleCellModel]]()
     var collectionView: UICollectionView!
     var flowLayout: UICollectionViewFlowLayout!
     var puzzleMode = RAPlayPuzzleMode.move
@@ -26,7 +26,6 @@ class RAPlayZoomPuzzleViewController: RABaseViewController {
         self.view.backgroundColor = UIColor.white
         self.automaticallyAdjustsScrollViewInsets = false
 
-        let right = UINavigationItem(title: "查看原图")
 //        self.navigationItem.rightBarButtonItem =
 
 //        let originalImageView = UIImageView(image: image)
@@ -37,12 +36,12 @@ class RAPlayZoomPuzzleViewController: RABaseViewController {
         flowLayout.minimumLineSpacing = 0
         flowLayout.minimumInteritemSpacing = 0
 
-        collectionView = UICollectionView(frame: CGRect(x: 0, y: 150, width: SCREEN_WIDTH, height: SCREEN_WIDTH), collectionViewLayout: flowLayout)
+        collectionView = UICollectionView(frame: CGRect(x: 0, y: 100, width: SCREEN_WIDTH, height: SCREEN_WIDTH), collectionViewLayout: flowLayout)
         collectionView.backgroundColor = UIColor.white
         collectionView.isScrollEnabled = false
         collectionView.dataSource = self
         collectionView.delegate = self
-        collectionView.register(RAPlayZoomPuzzleCell.classForCoder(), forCellWithReuseIdentifier: "cell")
+        collectionView.register(RAPlayRoomPuzzleCell.classForCoder(), forCellWithReuseIdentifier: "cell")
         self.view.addSubview(collectionView)
 
         self.reloadData()
@@ -73,14 +72,14 @@ class RAPlayZoomPuzzleViewController: RABaseViewController {
     }
 }
 
-extension RAPlayZoomPuzzleViewController: UICollectionViewDelegateFlowLayout {
+extension RAPlayRoomPuzzleViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: SCREEN_WIDTH/CGFloat(playSize.column), height: SCREEN_WIDTH/CGFloat(playSize.row))
     }
 
 }
 
-extension RAPlayZoomPuzzleViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension RAPlayRoomPuzzleViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return dataSource.count
     }
@@ -96,7 +95,7 @@ extension RAPlayZoomPuzzleViewController: UICollectionViewDelegate, UICollection
 
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         let cellModel = dataSource[indexPath.section][indexPath.item]
-        let myCell = cell as! RAPlayZoomPuzzleCell
+        let myCell = cell as! RAPlayRoomPuzzleCell
         myCell.reloadUI(cellModel: cellModel)
     }
 

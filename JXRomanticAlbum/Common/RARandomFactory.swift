@@ -10,8 +10,8 @@ import Foundation
 import UIKit
 
 class RARandomFactory {
-    static func getRandomPuzzleArray(playSize: RAPlaySize, image: UIImage) -> [[RAPlayZoomPuzzleCellModel]] {
-        var resultArray = [[RAPlayZoomPuzzleCellModel]]()
+    static func getRandomPuzzleArray(playSize: RAPlaySize, image: UIImage) -> [[RAPlayRoomPuzzleCellModel]] {
+        var resultArray = [[RAPlayRoomPuzzleCellModel]]()
 
         var imageCoordinateArray = [RAItemCoordinate]()
         for x in 0..<playSize.column {
@@ -27,9 +27,9 @@ class RARandomFactory {
         let columnSingleRatio = 1/CGFloat(playSize.column)
         
         for y in 0..<playSize.row {
-            var rowDataSource = [RAPlayZoomPuzzleCellModel]()
+            var rowDataSource = [RAPlayRoomPuzzleCellModel]()
             for x in 0..<playSize.column {
-                let cellModel = RAPlayZoomPuzzleCellModel()
+                let cellModel = RAPlayRoomPuzzleCellModel()
                 cellModel.image = image
                 cellModel.playSize = playSize
                 cellModel.coordinate = RAItemCoordinate.init(x: x, y: y)

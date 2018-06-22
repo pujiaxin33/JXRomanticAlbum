@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class RAPlayZoomPuzzleCellModel {
+class RAPlayRoomPuzzleCellModel {
     var isEmpty = false
     var playSize: RAPlaySize?
     //cell的坐标，存储cell真实的坐标信息

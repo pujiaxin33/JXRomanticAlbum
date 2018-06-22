@@ -15,6 +15,7 @@ let SCREEN_Height: CGFloat = UIScreen.main.bounds.height
 enum RAPlayPrimaryMode {
     case puzzle
     case reverse
+    case photoWall
 }
 
 enum RAPlayPuzzleMode {
@@ -22,6 +23,7 @@ enum RAPlayPuzzleMode {
     case exchange
     case move
 }
+
 
 struct RAPlaySize {
     var row: Int
@@ -32,6 +34,7 @@ struct RAItemCoordinate {
     var x: Int
     var y: Int
 }
+
 
 
 

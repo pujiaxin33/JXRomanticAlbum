@@ -13,10 +13,10 @@
 		196EB02920D2592C0058E926 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 196EB02720D2592C0058E926 /* LaunchScreen.storyboard */; };
 		196EB03620D26C5D0058E926 /* RAMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196EB03520D26C5D0058E926 /* RAMainViewController.swift */; };
 		196EB03820D26CAE0058E926 /* RAPlayModeSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196EB03720D26CAE0058E926 /* RAPlayModeSelectViewController.swift */; };
-		196EB03A20D26D190058E926 /* RAPlayZoomPuzzleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196EB03920D26D190058E926 /* RAPlayZoomPuzzleViewController.swift */; };
+		196EB03A20D26D190058E926 /* RAPlayRoomPuzzleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196EB03920D26D190058E926 /* RAPlayRoomPuzzleViewController.swift */; };
 		196EB03D20D273620058E926 /* RADefines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196EB03C20D273620058E926 /* RADefines.swift */; };
-		196EB03F20D277330058E926 /* RAPlayZoomPuzzleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196EB03E20D277330058E926 /* RAPlayZoomPuzzleCell.swift */; };
-		196EB04120D2779C0058E926 /* RAPlayZoomPuzzleCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196EB04020D2779C0058E926 /* RAPlayZoomPuzzleCellModel.swift */; };
+		196EB03F20D277330058E926 /* RAPlayRoomPuzzleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196EB03E20D277330058E926 /* RAPlayRoomPuzzleCell.swift */; };
+		196EB04120D2779C0058E926 /* RAPlayRoomPuzzleCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196EB04020D2779C0058E926 /* RAPlayRoomPuzzleCellModel.swift */; };
 		196EB04320D383320058E926 /* RARandomFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196EB04220D383320058E926 /* RARandomFactory.swift */; };
 		196EB04520D3916B0058E926 /* RARuleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196EB04420D3916B0058E926 /* RARuleManager.swift */; };
 		196EB05020D3B93C0058E926 /* love_explosion.json in Resources */ = {isa = PBXBuildFile; fileRef = 196EB04D20D3B93B0058E926 /* love_explosion.json */; };
@@ -26,6 +26,15 @@
 		196EB05920D3C7B20058E926 /* RACompletedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196EB05820D3C7B20058E926 /* RACompletedView.swift */; };
 		196EB05B20D483170058E926 /* RAPlaySizeSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196EB05A20D483170058E926 /* RAPlaySizeSelectViewController.swift */; };
 		196EB05D20D484E60058E926 /* RABaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196EB05C20D484E60058E926 /* RABaseViewController.swift */; };
+		19AB17CA20D8D30900BF01DC /* RAPhotoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AB17C920D8D30900BF01DC /* RAPhotoManager.swift */; };
+		19AB17CC20D8DD0200BF01DC /* RAPlayRoomReverseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AB17CB20D8DD0200BF01DC /* RAPlayRoomReverseViewController.swift */; };
+		19AB17CE20D8DDB900BF01DC /* RAPlayRoomReverseCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AB17CD20D8DDB900BF01DC /* RAPlayRoomReverseCellModel.swift */; };
+		19AB17D020D8DE2700BF01DC /* RAPlayRoomReverseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AB17CF20D8DE2700BF01DC /* RAPlayRoomReverseCell.swift */; };
+		19AB17D220D8EFA100BF01DC /* UIImage+Crop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AB17D120D8EFA100BF01DC /* UIImage+Crop.swift */; };
+		19AB17D420D8FA5800BF01DC /* RALocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AB17D320D8FA5800BF01DC /* RALocationViewController.swift */; };
+		19AB17D620D9007700BF01DC /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19AB17D520D9007700BF01DC /* MapKit.framework */; };
+		19AB17D820D90F2000BF01DC /* RADatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AB17D720D90F2000BF01DC /* RADatePickerView.swift */; };
+		19AB17DA20D90F2700BF01DC /* RADatePickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19AB17D920D90F2700BF01DC /* RADatePickerView.xib */; };
 		7370039E63808BEAAFADFAF0 /* Pods_JXRomanticAlbum.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3C12A29A08E6A3268E6099A /* Pods_JXRomanticAlbum.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,10 +47,10 @@
 		196EB02A20D2592C0058E926 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		196EB03520D26C5D0058E926 /* RAMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RAMainViewController.swift; sourceTree = "<group>"; };
 		196EB03720D26CAE0058E926 /* RAPlayModeSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RAPlayModeSelectViewController.swift; sourceTree = "<group>"; };
-		196EB03920D26D190058E926 /* RAPlayZoomPuzzleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RAPlayZoomPuzzleViewController.swift; sourceTree = "<group>"; };
+		196EB03920D26D190058E926 /* RAPlayRoomPuzzleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RAPlayRoomPuzzleViewController.swift; sourceTree = "<group>"; };
 		196EB03C20D273620058E926 /* RADefines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RADefines.swift; sourceTree = "<group>"; };
-		196EB03E20D277330058E926 /* RAPlayZoomPuzzleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RAPlayZoomPuzzleCell.swift; sourceTree = "<group>"; };
-		196EB04020D2779C0058E926 /* RAPlayZoomPuzzleCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RAPlayZoomPuzzleCellModel.swift; sourceTree = "<group>"; };
+		196EB03E20D277330058E926 /* RAPlayRoomPuzzleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RAPlayRoomPuzzleCell.swift; sourceTree = "<group>"; };
+		196EB04020D2779C0058E926 /* RAPlayRoomPuzzleCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RAPlayRoomPuzzleCellModel.swift; sourceTree = "<group>"; };
 		196EB04220D383320058E926 /* RARandomFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RARandomFactory.swift; sourceTree = "<group>"; };
 		196EB04420D3916B0058E926 /* RARuleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RARuleManager.swift; sourceTree = "<group>"; };
 		196EB04D20D3B93B0058E926 /* love_explosion.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = love_explosion.json; sourceTree = "<group>"; };
@@ -51,6 +60,15 @@
 		196EB05820D3C7B20058E926 /* RACompletedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RACompletedView.swift; sourceTree = "<group>"; };
 		196EB05A20D483170058E926 /* RAPlaySizeSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RAPlaySizeSelectViewController.swift; sourceTree = "<group>"; };
 		196EB05C20D484E60058E926 /* RABaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RABaseViewController.swift; sourceTree = "<group>"; };
+		19AB17C920D8D30900BF01DC /* RAPhotoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RAPhotoManager.swift; sourceTree = "<group>"; };
+		19AB17CB20D8DD0200BF01DC /* RAPlayRoomReverseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RAPlayRoomReverseViewController.swift; sourceTree = "<group>"; };
+		19AB17CD20D8DDB900BF01DC /* RAPlayRoomReverseCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RAPlayRoomReverseCellModel.swift; sourceTree = "<group>"; };
+		19AB17CF20D8DE2700BF01DC /* RAPlayRoomReverseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RAPlayRoomReverseCell.swift; sourceTree = "<group>"; };
+		19AB17D120D8EFA100BF01DC /* UIImage+Crop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Crop.swift"; sourceTree = "<group>"; };
+		19AB17D320D8FA5800BF01DC /* RALocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RALocationViewController.swift; sourceTree = "<group>"; };
+		19AB17D520D9007700BF01DC /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		19AB17D720D90F2000BF01DC /* RADatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RADatePickerView.swift; sourceTree = "<group>"; };
+		19AB17D920D90F2700BF01DC /* RADatePickerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RADatePickerView.xib; sourceTree = "<group>"; };
 		46A97EB8C8CD66D8F4FD1700 /* Pods-JXRomanticAlbum.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JXRomanticAlbum.release.xcconfig"; path = "Pods/Target Support Files/Pods-JXRomanticAlbum/Pods-JXRomanticAlbum.release.xcconfig"; sourceTree = "<group>"; };
 		B3C12A29A08E6A3268E6099A /* Pods_JXRomanticAlbum.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JXRomanticAlbum.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA9BD226039D34CA824AAEBE /* Pods-JXRomanticAlbum.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JXRomanticAlbum.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JXRomanticAlbum/Pods-JXRomanticAlbum.debug.xcconfig"; sourceTree = "<group>"; };
@@ -61,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19AB17D620D9007700BF01DC /* MapKit.framework in Frameworks */,
 				7370039E63808BEAAFADFAF0 /* Pods_JXRomanticAlbum.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -107,7 +126,9 @@
 				196EB03520D26C5D0058E926 /* RAMainViewController.swift */,
 				196EB03720D26CAE0058E926 /* RAPlayModeSelectViewController.swift */,
 				196EB05A20D483170058E926 /* RAPlaySizeSelectViewController.swift */,
-				196EB03920D26D190058E926 /* RAPlayZoomPuzzleViewController.swift */,
+				196EB03920D26D190058E926 /* RAPlayRoomPuzzleViewController.swift */,
+				19AB17CB20D8DD0200BF01DC /* RAPlayRoomReverseViewController.swift */,
+				19AB17D320D8FA5800BF01DC /* RALocationViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -117,6 +138,8 @@
 			children = (
 				196EB05720D3C7910058E926 /* Puzzle */,
 				196EB05820D3C7B20058E926 /* RACompletedView.swift */,
+				19AB17D720D90F2000BF01DC /* RADatePickerView.swift */,
+				19AB17D920D90F2700BF01DC /* RADatePickerView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -124,7 +147,8 @@
 		196EB03220D25AB70058E926 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				196EB04020D2779C0058E926 /* RAPlayZoomPuzzleCellModel.swift */,
+				196EB04020D2779C0058E926 /* RAPlayRoomPuzzleCellModel.swift */,
+				19AB17CD20D8DDB900BF01DC /* RAPlayRoomReverseCellModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -135,6 +159,8 @@
 				196EB03C20D273620058E926 /* RADefines.swift */,
 				196EB04220D383320058E926 /* RARandomFactory.swift */,
 				196EB04420D3916B0058E926 /* RARuleManager.swift */,
+				19AB17C920D8D30900BF01DC /* RAPhotoManager.swift */,
+				19AB17D120D8EFA100BF01DC /* UIImage+Crop.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -180,7 +206,8 @@
 		196EB05720D3C7910058E926 /* Puzzle */ = {
 			isa = PBXGroup;
 			children = (
-				196EB03E20D277330058E926 /* RAPlayZoomPuzzleCell.swift */,
+				196EB03E20D277330058E926 /* RAPlayRoomPuzzleCell.swift */,
+				19AB17CF20D8DE2700BF01DC /* RAPlayRoomReverseCell.swift */,
 			);
 			path = Puzzle;
 			sourceTree = "<group>";
@@ -197,6 +224,7 @@
 		F898DB7D56483BB9A63DB9F1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				19AB17D520D9007700BF01DC /* MapKit.framework */,
 				B3C12A29A08E6A3268E6099A /* Pods_JXRomanticAlbum.framework */,
 			);
 			name = Frameworks;
@@ -238,6 +266,11 @@
 				TargetAttributes = {
 					196EB01A20D259290058E926 = {
 						CreatedOnToolsVersion = 9.4;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -271,6 +304,7 @@
 				196EB05620D3BAA10058E926 /* completed.json in Resources */,
 				196EB02420D259290058E926 /* Main.storyboard in Resources */,
 				196EB05020D3B93C0058E926 /* love_explosion.json in Resources */,
+				19AB17DA20D90F2700BF01DC /* RADatePickerView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,17 +375,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19AB17D220D8EFA100BF01DC /* UIImage+Crop.swift in Sources */,
 				196EB03820D26CAE0058E926 /* RAPlayModeSelectViewController.swift in Sources */,
 				196EB05B20D483170058E926 /* RAPlaySizeSelectViewController.swift in Sources */,
 				196EB05D20D484E60058E926 /* RABaseViewController.swift in Sources */,
-				196EB03A20D26D190058E926 /* RAPlayZoomPuzzleViewController.swift in Sources */,
+				196EB03A20D26D190058E926 /* RAPlayRoomPuzzleViewController.swift in Sources */,
+				19AB17CA20D8D30900BF01DC /* RAPhotoManager.swift in Sources */,
+				19AB17D820D90F2000BF01DC /* RADatePickerView.swift in Sources */,
 				196EB01F20D259290058E926 /* AppDelegate.swift in Sources */,
+				19AB17CE20D8DDB900BF01DC /* RAPlayRoomReverseCellModel.swift in Sources */,
 				196EB03620D26C5D0058E926 /* RAMainViewController.swift in Sources */,
+				19AB17D020D8DE2700BF01DC /* RAPlayRoomReverseCell.swift in Sources */,
+				19AB17CC20D8DD0200BF01DC /* RAPlayRoomReverseViewController.swift in Sources */,
 				196EB04320D383320058E926 /* RARandomFactory.swift in Sources */,
-				196EB04120D2779C0058E926 /* RAPlayZoomPuzzleCellModel.swift in Sources */,
+				196EB04120D2779C0058E926 /* RAPlayRoomPuzzleCellModel.swift in Sources */,
 				196EB04520D3916B0058E926 /* RARuleManager.swift in Sources */,
+				19AB17D420D8FA5800BF01DC /* RALocationViewController.swift in Sources */,
 				196EB03D20D273620058E926 /* RADefines.swift in Sources */,
-				196EB03F20D277330058E926 /* RAPlayZoomPuzzleCell.swift in Sources */,
+				196EB03F20D277330058E926 /* RAPlayRoomPuzzleCell.swift in Sources */,
 				196EB05920D3C7B20058E926 /* RACompletedView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

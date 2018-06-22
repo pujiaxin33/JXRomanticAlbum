@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RAPlayZoomPuzzleCell: UICollectionViewCell {
+class RAPlayRoomPuzzleCell: UICollectionViewCell {
     var imageView: UIImageView!
 
     override init(frame: CGRect) {
@@ -23,7 +23,7 @@ class RAPlayZoomPuzzleCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 
-    func reloadUI(cellModel: RAPlayZoomPuzzleCellModel) {
+    func reloadUI(cellModel: RAPlayRoomPuzzleCellModel) {
         imageView.image = cellModel.image
         imageView.layer.contentsRect = cellModel.contentsRect!
         imageView.isHidden = cellModel.isEmpty

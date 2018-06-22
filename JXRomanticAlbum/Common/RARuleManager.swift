@@ -28,7 +28,7 @@ class RARuleManager {
         return false
     }
 
-    static func checkPuzzleCompleted(dataSource: [[RAPlayZoomPuzzleCellModel]]) -> Bool {
+    static func checkPuzzleCompleted(dataSource: [[RAPlayRoomPuzzleCellModel]]) -> Bool {
         guard dataSource.last?.last?.isEmpty == true else {
             //右下角必须是空白
             return false
@@ -40,7 +40,7 @@ class RARuleManager {
                     return false
                 }
                 //---当前元素是否与后边的元素相连---//
-                var nextItem: RAPlayZoomPuzzleCellModel?
+                var nextItem: RAPlayRoomPuzzleCellModel?
                 if column != rowItems.count - 1 {
                     //不是当前行的最后一个元素
                     nextItem = rowItems[column + 1]
@@ -55,7 +55,7 @@ class RARuleManager {
                 //---当前元素是否与后边的元素相连---//
 
                 //---当前元素是否与下面的元素相连---//
-                var underItem: RAPlayZoomPuzzleCellModel?
+                var underItem: RAPlayRoomPuzzleCellModel?
                 if row != dataSource.count - 1 {
                     //不是最后一行
                     underItem = dataSource[row + 1][column]

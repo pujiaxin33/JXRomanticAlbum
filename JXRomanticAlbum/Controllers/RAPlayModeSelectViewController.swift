@@ -9,22 +9,50 @@
 import UIKit
 
 class RAPlayModeSelectViewController: RABaseViewController {
+    var clickedPlayMode: RAPlayPrimaryMode?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        RAPhotoManager.requestCameraPermission { (result) in
+
+        }
+        RAPhotoManager.requestPhotoLibraryPermission { (result) in
+            
+        }
+
+    
     }
 
 
     @IBAction func puzzleButtonClicked(_ sender: UIButton) {
-        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
-        let modeVC = storyboard.instantiateViewController(withIdentifier: "RAPlaySizeSelectViewController") as! RAPlaySizeSelectViewController
-        modeVC.image = image
-        self.navigationController?.pushViewController(modeVC, animated: true)
+        self.clickedPlayMode = .puzzle
+        RAPhotoManager.shared.dispalyPictureChooseSheet(sourceVC: self)
     }
 
     @IBAction func reverseButtonClicked(_ sender: UIButton) {
+        self.clickedPlayMode = .reverse
+        let vc = RAPlayRoomReverseViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 
+    @IBAction func photoWallButtonClicked(_ sender: UIButton) {
+        self.clickedPlayMode = .photoWall
+    }
+
+
+}
+
+extension RAPlayModeSelectViewController: RAPhotoManagerDelegate {
+    func photoManagerDidChooseImage(image: UIImage) {
+        if self.clickedPlayMode == .puzzle {
+            let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+            let modeVC = storyboard.instantiateViewController(withIdentifier: "RAPlaySizeSelectViewController") as! RAPlaySizeSelectViewController
+            modeVC.image = image
+            self.navigationController?.pushViewController(modeVC, animated: true)
+        }else if self.clickedPlayMode == .photoWall {
+
+        }
+
+    }
 }

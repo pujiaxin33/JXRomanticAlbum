@@ -17,26 +17,15 @@ class RAPlaySizeSelectViewController: RABaseViewController {
     }
 
 
-    @IBAction func threeButtonClicked(_ sender: UIButton) {
-        let puzzleVC = RAPlayZoomPuzzleViewController()
+    @IBAction func sizeButtonClicked(_ sender: UIButton) {
+        let sizeArray = [RAPlaySize.init(row: 3, column: 3), RAPlaySize.init(row: 4, column: 4), RAPlaySize.init(row: 5, column: 5)]
+        let index = sender.tag - 1000
+        let puzzleVC = RAPlayRoomPuzzleViewController()
         puzzleVC.image = image
-        puzzleVC.playSize = .init(row: 3, column: 3)
+        puzzleVC.playSize = sizeArray[index]
         self.navigationController?.pushViewController(puzzleVC, animated: true)
     }
 
-    @IBAction func sixButtonClicked(_ sender: Any) {
-        let puzzleVC = RAPlayZoomPuzzleViewController()
-        puzzleVC.image = image
-        puzzleVC.playSize = .init(row: 6, column: 6)
-        self.navigationController?.pushViewController(puzzleVC, animated: true)
-    }
-
-    @IBAction func nineButtonClicked(_ sender: UIButton) {
-        let puzzleVC = RAPlayZoomPuzzleViewController()
-        puzzleVC.image = image
-        puzzleVC.playSize = .init(row: 9, column: 9)
-        self.navigationController?.pushViewController(puzzleVC, animated: true)
-    }
 
 
 }
