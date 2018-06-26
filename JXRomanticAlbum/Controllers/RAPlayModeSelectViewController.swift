@@ -8,11 +8,13 @@
 
 import UIKit
 
-class RAPlayModeSelectViewController: RABaseViewController {
+class RAPlayModeSelectViewController: RABaseTableViewController {
     var clickedPlayMode: RAPlayPrimaryMode?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        self.title = "玩法选择"
 
         RAPhotoManager.requestCameraPermission { (result) in
 
@@ -24,40 +26,39 @@ class RAPlayModeSelectViewController: RABaseViewController {
     
     }
 
-
-    @IBAction func puzzleButtonClicked(_ sender: UIButton) {
-        self.clickedPlayMode = .puzzle
-        RAPhotoManager.shared.dispalyPictureChooseSheet(sourceVC: self)
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.row {
+        case 0:
+            self.clickedPlayMode = .puzzle
+            RAPhotoManager.shared.dispalyPictureChooseSheet(sourceVC: self)
+        case 1:
+            self.clickedPlayMode = .guess
+            self.performSegue(withIdentifier: "To_RAPlayGuessModeSelectViewController", sender: nil)
+        case 2:
+            self.clickedPlayMode = .photoWall
+            self.performSegue(withIdentifier: "To_RAPlayPhotoWallViewController", sender: nil)
+        case 3:
+            self.clickedPlayMode = .sticker
+            self.performSegue(withIdentifier: "To_RAPlayRoomVideoStickerViewController", sender: nil)
+        default:
+            break
+        }
     }
 
-    @IBAction func reverseButtonClicked(_ sender: UIButton) {
-        self.clickedPlayMode = .reverse
-        let vc = RAPlayRoomReverseViewController()
-        self.navigationController?.pushViewController(vc, animated: true)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "To_RAPlaySizeSelectViewController" {
+            let toVC = segue.destination as! RAPlaySizeSelectViewController
+            toVC.image = self.image
+        }
     }
-
-    @IBAction func photoWallButtonClicked(_ sender: UIButton) {
-        self.clickedPlayMode = .photoWall
-    }
-    
-    @IBAction func stickerButtonClicked(_ sender: UIButton) {
-        let vc = RAPlayRoomVideoStickerViewController()
-        self.navigationController?.pushViewController(vc, animated: true)
-    }
-    
 
 }
 
 extension RAPlayModeSelectViewController: RAPhotoManagerDelegate {
     func photoManagerDidChooseImage(image: UIImage) {
         if self.clickedPlayMode == .puzzle {
-            let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
-            let modeVC = storyboard.instantiateViewController(withIdentifier: "RAPlaySizeSelectViewController") as! RAPlaySizeSelectViewController
-            modeVC.image = image
-            self.navigationController?.pushViewController(modeVC, animated: true)
-        }else if self.clickedPlayMode == .photoWall {
-
+            self.image = image
+            self.performSegue(withIdentifier: "To_RAPlaySizeSelectViewController", sender: nil)
         }
-
     }
 }

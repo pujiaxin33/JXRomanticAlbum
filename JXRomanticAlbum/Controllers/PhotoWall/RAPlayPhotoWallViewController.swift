@@ -1,26 +1,19 @@
 //
-//  RABaseViewController.swift
+//  RAPlayPhotoWallViewController.swift
 //  JXRomanticAlbum
 //
-//  Created by jiaxin on 2018/6/16.
+//  Created by jiaxin on 2018/6/22.
 //  Copyright © 2018年 jiaxin. All rights reserved.
 //
 
 import UIKit
 
-class RABaseViewController: UIViewController {
-    var image: UIImage?
-
-    deinit {
-        print(NSStringFromClass(self.classForCoder))
-    }
+class RAPlayPhotoWallViewController: RABaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = UIColor.white
-
-        self.edgesForExtendedLayout = .init(rawValue: 0)
+        self.title = "照片墙"
     }
 
     override func didReceiveMemoryWarning() {

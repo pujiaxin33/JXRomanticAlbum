@@ -26,6 +26,10 @@ class RAPlayRoomVideoStickerViewController: RABaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.title = "大头贴"
+
+        self.view.backgroundColor = UIColor.white
+
         let detectorOptions = [CIDetectorAccuracy: CIDetectorAccuracyLow]
         faceDetector = CIDetector(ofType: CIDetectorTypeFace, context: nil, options: detectorOptions)
 

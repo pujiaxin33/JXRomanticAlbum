@@ -16,7 +16,7 @@ class RAPlayRoomReverseCell: UICollectionViewCell {
         super.init(frame: frame)
 
         imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height))
-        addSubview(imageView)
+        contentView.addSubview(imageView)
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -34,6 +34,13 @@ class RAPlayRoomReverseCell: UICollectionViewCell {
 
     func showImage() {
         imageView.isHidden = false
+
+        let subtypes = [kCATransitionFromLeft, kCATransitionFromRight, kCATransitionFromTop, kCATransitionFromBottom]
+        let index = Int(arc4random())%subtypes.count
+        let transition = CATransition()
+        transition.type = "cube"
+        transition.subtype = subtypes[index]
+        self.contentView.layer.add(transition, forKey: "cube")
     }
 
 }

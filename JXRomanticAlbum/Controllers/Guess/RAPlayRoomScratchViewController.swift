@@ -1,0 +1,46 @@
+//
+//  RAPlayRoomScratchViewController.swift
+//  JXRomanticAlbum
+//
+//  Created by jiaxin on 2018/6/26.
+//  Copyright © 2018年 jiaxin. All rights reserved.
+//
+
+import UIKit
+import Photos
+
+class RAPlayRoomScratchViewController: RABaseViewController {
+    var currentAsset: PHAsset?
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        self.title = "刮刮乐"
+
+        self.view.backgroundColor = UIColor.white
+
+        self.currentAsset = RAPhotoManager.getRandomAsset()
+        PHImageManager.default().requestImage(for: self.currentAsset!, targetSize: PHImageManagerMaximumSize, contentMode: PHImageContentMode.default, options: nil) { (image, info) in
+            self.image = image
+            self.showScrathView()
+        }
+    }
+
+    func showScrathView() {
+
+        let imageView = UIImageView(image: self.image)
+        imageView.contentMode = .scaleAspectFit
+
+        let maskView = UIView()
+        maskView.backgroundColor = UIColor.lightGray
+
+        let margin: CGFloat = 20
+        let width = SCREEN_WIDTH - margin*2
+        let height = SCREEN_Height - 64 - margin*3
+        let scratchView = JXScratchView(contentView: imageView, maskView: maskView)
+        scratchView.strokeLineWidth = 30
+        scratchView.frame = CGRect(x: margin, y: margin, width: width, height: height)
+        self.view.addSubview(scratchView)
+    }
+
+}

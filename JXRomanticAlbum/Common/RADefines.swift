@@ -12,10 +12,21 @@ import UIKit
 let SCREEN_WIDTH: CGFloat = UIScreen.main.bounds.width
 let SCREEN_Height: CGFloat = UIScreen.main.bounds.height
 
+//MARK: 颜色相关
+func ColorWithRGBA(_ red: CGFloat,_  green: CGFloat,_ blue: CGFloat, _ alpha: CGFloat) -> UIColor {
+    return UIColor.init(red: red / 255.0, green: green / 255.0, blue: blue / 255.0, alpha: alpha)
+}
+func ColorWithHex(_ hex: Int, _ alpha: CGFloat) -> UIColor {
+    return ColorWithRGBA((CGFloat((hex & 0xFF0000) >> 16)), (CGFloat((hex & 0xFF00) >> 8)), (CGFloat(hex & 0xFF)), alpha)
+}
+
+let RAControlTintColor = ColorWithHex(0xFFC0CB, 1)
+
 enum RAPlayPrimaryMode {
     case puzzle
-    case reverse
+    case guess
     case photoWall
+    case sticker
 }
 
 enum RAPlayPuzzleMode {

@@ -66,6 +66,7 @@ class RAPlayRoomPuzzleViewController: RABaseViewController {
         attri.position = .center
         attri.positionConstraints.size = .init(width: .constant(value: 250), height: .constant(value: 200))
         attri.entryInteraction = .absorbTouches
+        attri.screenInteraction = .absorbTouches
         attri.screenBackground = .visualEffect(style: .dark)
         attri.entranceAnimation = .init(translate: EKAttributes.Animation.Translate(duration: 0), scale: EKAttributes.Animation.RangeAnimation(from: 0.1, to: 1, duration: 0.25), fade: EKAttributes.Animation.RangeAnimation(from: 0.5, to: 1, duration: 0.25))
         SwiftEntryKit.display(entry: view, using: attri)

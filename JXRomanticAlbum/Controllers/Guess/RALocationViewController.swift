@@ -18,6 +18,8 @@ class RALocationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.title = "照片位置"
+
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
 

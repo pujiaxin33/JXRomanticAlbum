@@ -17,9 +17,12 @@ class RAPlayRoomReverseViewController: RABaseViewController {
     var collectionView: UICollectionView!
     var flowLayout: UICollectionViewFlowLayout!
     var currentAsset: PHAsset?
+    let dateLabel = UILabel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        self.title = "反转"
 
         self.view.backgroundColor = UIColor.white
         self.automaticallyAdjustsScrollViewInsets = false
@@ -44,22 +47,40 @@ class RAPlayRoomReverseViewController: RABaseViewController {
 
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-        let dateLabel = UILabel()
+        dateLabel.isHidden = true
         dateLabel.text = dateFormatter.string(from: self.currentAsset!.creationDate!)
         self.view.addSubview(dateLabel)
         dateLabel.snp.makeConstraints { (make) in
             make.top.leading.equalToSuperview().offset(10)
         }
 
+        let dateButton = UIButton(type: .custom)
+        dateButton.backgroundColor = RAControlTintColor
+        dateButton.setTitleColor(.white, for: .normal)
+        dateButton.setTitle("  查看日期  ", for: .normal)
+        dateButton.layer.cornerRadius = 15
+        dateButton.layer.masksToBounds = true
+        dateButton.addTarget(self, action: #selector(dateButtonClicked(btn:)), for: .touchUpInside)
+        self.view.addSubview(dateButton)
+        dateButton.snp.makeConstraints { (make) in
+            make.top.equalToSuperview().offset(10)
+            make.leading.equalToSuperview().offset(10)
+            make.height.equalTo(30)
+        }
+
+
         let locationButton = UIButton(type: .custom)
-        locationButton.backgroundColor = UIColor.cyan
+        locationButton.backgroundColor = RAControlTintColor
         locationButton.setTitleColor(.white, for: .normal)
-        locationButton.setTitle("查看位置", for: .normal)
+        locationButton.setTitle("  查看位置  ", for: .normal)
+        locationButton.layer.cornerRadius = 15
+        locationButton.layer.masksToBounds = true
         locationButton.addTarget(self, action: #selector(locationButtonClicked(btn:)), for: .touchUpInside)
         self.view.addSubview(locationButton)
         locationButton.snp.makeConstraints { (make) in
             make.top.equalToSuperview().offset(10)
             make.trailing.equalToSuperview().offset(-10)
+            make.height.equalTo(30)
         }
         locationButton.isHidden = self.currentAsset?.location == nil
     }
@@ -98,16 +119,21 @@ class RAPlayRoomReverseViewController: RABaseViewController {
         attri.position = .center
         attri.positionConstraints.size = .init(width: .constant(value: 250), height: .constant(value: 200))
         attri.entryInteraction = .absorbTouches
+        attri.screenInteraction = .absorbTouches
         attri.screenBackground = .visualEffect(style: .dark)
         attri.entranceAnimation = .init(translate: EKAttributes.Animation.Translate(duration: 0), scale: EKAttributes.Animation.RangeAnimation(from: 0.1, to: 1, duration: 0.25), fade: EKAttributes.Animation.RangeAnimation(from: 0.5, to: 1, duration: 0.25))
         SwiftEntryKit.display(entry: view, using: attri)
     }
 
     @objc func locationButtonClicked(btn: UIButton) {
-//        let vc = RALocationViewController()
-//        vc.location = self.currentAsset?.location
-//        self.navigationController?.pushViewController(vc, animated: true)
-        self.showDatePickerView()
+        let vc = RALocationViewController()
+        vc.location = self.currentAsset?.location
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+
+    @objc func dateButtonClicked(btn: UIButton) {
+        dateLabel.isHidden = false
+        btn.isHidden = true
     }
 
     func showDatePickerView() {
@@ -119,9 +145,10 @@ class RAPlayRoomReverseViewController: RABaseViewController {
         attri.displayDuration = .infinity
         attri.position = .bottom
         attri.positionConstraints.size = .init(width: .constant(value: SCREEN_WIDTH), height: .constant(value: 244))
-        attri.positionConstraints.verticalOffset = 0
+        attri.positionConstraints.verticalOffset = -10
         attri.entryInteraction = .absorbTouches
-        attri.screenBackground = .visualEffect(style: .dark)
+        attri.screenInteraction = .absorbTouches
+        attri.screenBackground = .color(color: ColorWithHex(0x000000, 0.5))
         attri.entranceAnimation = .init(translate: EKAttributes.Animation.Translate(duration: 0.25), scale: EKAttributes.Animation.RangeAnimation(from: 1, to: 1, duration: 0.25), fade: EKAttributes.Animation.RangeAnimation(from: 1, to: 1, duration: 0.25))
         SwiftEntryKit.display(entry: view, using: attri)
     }
