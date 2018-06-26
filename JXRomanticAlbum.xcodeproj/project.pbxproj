@@ -39,8 +39,9 @@
 		19AB17D820D90F2000BF01DC /* RADatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AB17D720D90F2000BF01DC /* RADatePickerView.swift */; };
 		19AB17DA20D90F2700BF01DC /* RADatePickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19AB17D920D90F2700BF01DC /* RADatePickerView.xib */; };
 		19E3D98B20DCC62B007EA3A3 /* RAPlayRoomVideoStickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E3D98A20DCC62B007EA3A3 /* RAPlayRoomVideoStickerViewController.swift */; };
-		19F7C5D220E223CB0003F044 /* JXScratchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F7C5D120E223CB0003F044 /* JXScratchView.swift */; };
 		19F7C5D420E223F40003F044 /* RAPlayRoomScratchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F7C5D320E223F40003F044 /* RAPlayRoomScratchViewController.swift */; };
+		19F7C5D620E23BD10003F044 /* ScratchMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F7C5D520E23BD10003F044 /* ScratchMask.swift */; };
+		19F7C5D820E23D0C0003F044 /* UIImage+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F7C5D720E23D0B0003F044 /* UIImage+Utils.swift */; };
 		7370039E63808BEAAFADFAF0 /* Pods_JXRomanticAlbum.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3C12A29A08E6A3268E6099A /* Pods_JXRomanticAlbum.framework */; };
 /* End PBXBuildFile section */
 
@@ -79,8 +80,9 @@
 		19AB17D720D90F2000BF01DC /* RADatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RADatePickerView.swift; sourceTree = "<group>"; };
 		19AB17D920D90F2700BF01DC /* RADatePickerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RADatePickerView.xib; sourceTree = "<group>"; };
 		19E3D98A20DCC62B007EA3A3 /* RAPlayRoomVideoStickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RAPlayRoomVideoStickerViewController.swift; sourceTree = "<group>"; };
-		19F7C5D120E223CB0003F044 /* JXScratchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JXScratchView.swift; sourceTree = "<group>"; };
 		19F7C5D320E223F40003F044 /* RAPlayRoomScratchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RAPlayRoomScratchViewController.swift; sourceTree = "<group>"; };
+		19F7C5D520E23BD10003F044 /* ScratchMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScratchMask.swift; sourceTree = "<group>"; };
+		19F7C5D720E23D0B0003F044 /* UIImage+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Utils.swift"; sourceTree = "<group>"; };
 		46A97EB8C8CD66D8F4FD1700 /* Pods-JXRomanticAlbum.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JXRomanticAlbum.release.xcconfig"; path = "Pods/Target Support Files/Pods-JXRomanticAlbum/Pods-JXRomanticAlbum.release.xcconfig"; sourceTree = "<group>"; };
 		B3C12A29A08E6A3268E6099A /* Pods_JXRomanticAlbum.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JXRomanticAlbum.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA9BD226039D34CA824AAEBE /* Pods-JXRomanticAlbum.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JXRomanticAlbum.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JXRomanticAlbum/Pods-JXRomanticAlbum.debug.xcconfig"; sourceTree = "<group>"; };
@@ -116,7 +118,8 @@
 				19AB17D320D8FA5800BF01DC /* RALocationViewController.swift */,
 				191B37BB20DCDA23005BA959 /* RAPlayRoomFilterViewController.swift */,
 				19F7C5D320E223F40003F044 /* RAPlayRoomScratchViewController.swift */,
-				19F7C5D120E223CB0003F044 /* JXScratchView.swift */,
+				19F7C5D520E23BD10003F044 /* ScratchMask.swift */,
+				19F7C5D720E23D0B0003F044 /* UIImage+Utils.swift */,
 			);
 			path = Guess;
 			sourceTree = "<group>";
@@ -447,10 +450,11 @@
 				196EB04520D3916B0058E926 /* RARuleManager.swift in Sources */,
 				191B37C120DD04DF005BA959 /* RAPlayGuessModeSelectViewController.swift in Sources */,
 				19AB17D420D8FA5800BF01DC /* RALocationViewController.swift in Sources */,
-				19F7C5D220E223CB0003F044 /* JXScratchView.swift in Sources */,
+				19F7C5D820E23D0C0003F044 /* UIImage+Utils.swift in Sources */,
 				196EB03D20D273620058E926 /* RADefines.swift in Sources */,
 				196EB03F20D277330058E926 /* RAPlayRoomPuzzleCell.swift in Sources */,
 				191B37BC20DCDA23005BA959 /* RAPlayRoomFilterViewController.swift in Sources */,
+				19F7C5D620E23BD10003F044 /* ScratchMask.swift in Sources */,
 				196EB05920D3C7B20058E926 /* RACompletedView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

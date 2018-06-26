@@ -28,19 +28,21 @@ class RAPlayRoomScratchViewController: RABaseViewController {
 
     func showScrathView() {
 
-        let imageView = UIImageView(image: self.image)
-        imageView.contentMode = .scaleAspectFit
-
-        let maskView = UIView()
-        maskView.backgroundColor = UIColor.lightGray
-
         let margin: CGFloat = 20
         let width = SCREEN_WIDTH - margin*2
         let height = SCREEN_Height - 64 - margin*3
-        let scratchView = JXScratchView(contentView: imageView, maskView: maskView)
-        scratchView.strokeLineWidth = 30
-        scratchView.frame = CGRect(x: margin, y: margin, width: width, height: height)
-        self.view.addSubview(scratchView)
+        let frame = CGRect(x: margin, y: margin, width: width, height: height)
+
+        let imageView = UIImageView(image: self.image)
+        imageView.frame = frame
+        imageView.contentMode = .scaleAspectFit
+        self.view.addSubview(imageView)
+
+        let maskView = ScratchMask(frame: frame)
+        maskView.lineType = CGLineCap.round
+        maskView.lineWidth = 30
+        maskView.image = UIImage.imageWithColor(color: UIColor.lightGray)
+        self.view.addSubview(maskView)
     }
 
 }
