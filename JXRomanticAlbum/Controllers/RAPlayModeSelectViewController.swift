@@ -40,6 +40,10 @@ class RAPlayModeSelectViewController: RABaseTableViewController {
         case 3:
             self.clickedPlayMode = .sticker
             self.performSegue(withIdentifier: "To_RAPlayRoomVideoStickerViewController", sender: nil)
+        case 4:
+            self.clickedPlayMode = .bigFace
+            let vc = RAPlayRoomBigFaceViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
         default:
             break
         }

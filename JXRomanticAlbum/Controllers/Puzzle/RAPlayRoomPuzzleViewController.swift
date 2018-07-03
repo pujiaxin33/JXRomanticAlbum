@@ -26,12 +26,6 @@ class RAPlayRoomPuzzleViewController: RABaseViewController {
         self.view.backgroundColor = UIColor.white
         self.automaticallyAdjustsScrollViewInsets = false
 
-//        self.navigationItem.rightBarButtonItem =
-
-//        let originalImageView = UIImageView(image: image)
-//        originalImageView.frame = CGRect(x: 100, y: 0, width: 80, height: 80)
-//        view.addSubview(originalImageView)
-
         flowLayout = UICollectionViewFlowLayout()
         flowLayout.minimumLineSpacing = 0
         flowLayout.minimumInteritemSpacing = 0

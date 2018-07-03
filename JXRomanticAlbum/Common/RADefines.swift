@@ -27,6 +27,7 @@ enum RAPlayPrimaryMode {
     case guess
     case photoWall
     case sticker
+    case bigFace
 }
 
 enum RAPlayPuzzleMode {

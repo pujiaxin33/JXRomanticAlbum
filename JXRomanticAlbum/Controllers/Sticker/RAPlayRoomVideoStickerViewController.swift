@@ -22,6 +22,9 @@ class RAPlayRoomVideoStickerViewController: RABaseViewController {
     var faceDetector: CIDetector?
     var isFaceThinking = false
 
+    deinit {
+        videoCamera?.stopCapture()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,13 +64,17 @@ class RAPlayRoomVideoStickerViewController: RABaseViewController {
         blendFilter.addTarget(filterView!)
 
         filter.frameProcessingCompletionBlock = {[weak self] (output: GPUImageOutput?, time: CMTime) -> Void in
-            let rect = self!.faceBounds
-            let size = self!.stickerImageView!.bounds.size
-            self?.stickerImageView?.frame = CGRect(x: rect.origin.x + (rect.size.width - size.width)/2, y: rect.origin.y - size.height, width: size.width, height: size.height)
-            self?.element?.update()
+            self?.updateSticker()
             }
 
         videoCamera?.startCapture()
+    }
+
+    func updateSticker() {
+        let rect = self.faceBounds
+        let size = self.stickerImageView!.bounds.size
+        self.stickerImageView?.frame = CGRect(x: rect.origin.x + (rect.size.width - size.width)/2, y: rect.origin.y - size.height, width: size.width, height: size.height)
+        self.element?.update()
     }
 
     @objc func grepFacesForSampleBuffer(sampleBuffer: CMSampleBuffer) {
